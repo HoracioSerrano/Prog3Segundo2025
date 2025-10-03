@@ -10,3 +10,6 @@ console.log(`
     Nombre: ${process.env.NOMBRE}
     `);//<-- con el parametro --env-file=.env levanta las variables de entorno desde el archivo .env
 
+console.log(process.env);
+
+

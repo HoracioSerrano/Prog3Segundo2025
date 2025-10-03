@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "00VariablesEntorno": "node --watch --env-file=.env 00VariablesEntorno.js",
     "01Express": "node --watch --env-file=.env 01Express.js",
-    "02ExpressContenidoEstatico": "node --watch --env-file=.env 02ExpressContenidoEstatico.js"
+    "02ExpressRutas": "node --watch --env-file=.env 02ExpressRutas.js",
+    "03ExpressMiddleWare": "node --watch --env-file=.env 03ExpressMiddleWare.js",
+    "04ExpressContenidoEstatico": "node --watch --env-file=.env 04ExpressContenidoEstatico.js"
   },
   "author": "",
   "license": "ISC",
