@@ -1,0 +1,17 @@
+{
+  "name": "clase20251003",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "00VariablesEntorno": "node --watch --env-file=.env 00VariablesEntorno.js",
+    "01Express": "node --watch --env-file=.env 01Express.js",
+    "02ExpressContenidoEstatico": "node --watch --env-file=.env 02ExpressContenidoEstatico.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
