@@ -3,7 +3,7 @@ const express = require('express'); //npm install express
 const app = express();
 const port = 3000;
 
-//3 middlewares al mismo destino http://localhost:3000/user
+//2 middlewares al mismo destino http://localhost:3000/user
 app.use('/user',(req,res,next)=>{
     res.comentario = "Middleware User";
     next();
@@ -17,7 +17,7 @@ app.use('/user',(req,res,next)=>{
 app.get('/user', (req, res) => {
   res.send(res.comentario + "get /user");
 });
-
+//mismos middlewares de http://localhost:3000/user
 app.get('/user/miuser', (req, res) => {
   res.send(res.comentario + "get /user");
 });
@@ -39,8 +39,6 @@ app.use('/privado',(req,res,next)=>{
         next();
     }
 });
-
-//Ruta sin middleware
 app.get('/privado', (req, res) => {
     res.send("Dentro de Privado");
 });
