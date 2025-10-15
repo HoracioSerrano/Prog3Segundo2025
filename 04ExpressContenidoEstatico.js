@@ -4,7 +4,7 @@ const port = 3000;
 
 const path = require('node:path');
 
-const ruta = path.resolve(__dirname, "ContenidoEstatico");
+const ruta = path.resolve(__dirname, "ContenidoEstatico");//path.resolve(process.env.RUTA_CONTENTIDO_ESTATICO);
 
 console.log(ruta);
 
