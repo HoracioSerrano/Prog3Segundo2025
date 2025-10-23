@@ -30,7 +30,7 @@ async function inicializarBaseDeDatos() {
     await db.end();
 }
 
-//inicializarBaseDeDatos();
+inicializarBaseDeDatos();
 
 
 async function select() {
@@ -68,23 +68,3 @@ async function update() {
 
 //update();
 
-
-
-//controller
-app.post('/insertarUsuario',async (req,res,next)=>{
-    let body = req.body;
-    await InsertarCliente(body.nombre, body.telefono);
-});
-
-//modelo
-async function InsertarCliente(nombre,telefono){
-        const db = await mysql.createConnection({
-        host:'localhost', //url para coneccion http a la base de datos
-        user:'root',//si tubiese usuario va aqui
-        password:'',//si tubiese contraseña va aqui
-        database:'dbprueba'//nombre de la base a utilizar
-    });
-    let qry = `insert into clientes(nombre, telefono, fecha_alta)values(?,?,?)`;
-    let resultado = await db.execute(qry,['Juan Perez', '741852963', new Date()]);
-    await db.end();
-}
