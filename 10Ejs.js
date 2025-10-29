@@ -1,11 +1,11 @@
 //motor de plantillas ejs
 //ejemplo renderizando con llamada a ejs
 
-const express = require('express'); //npm install express
+const express = require('express'); 
 const app = express();
 const port = 3000;
 const path = require('path');
-const ejs = require('ejs');
+const ejs = require('ejs'); //npm install ejs
 
 app.get('/', async (req, res) => {
     const persona = {nombre:"horacio", apellido:"serrano"};
