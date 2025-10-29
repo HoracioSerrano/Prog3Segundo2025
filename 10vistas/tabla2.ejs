@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for( let index = 0; index < personas.length; index++ ) { %>
+                <tr>
+                    <td><%= personas[index].nombre %></td>
+                    <td><%= personas[index].apellido %></td>
+                    <td>
+                        <% if (personas[index].sexo == 1) { %>
+                            masculino
+                        <% }else{ %>
+                            femenino
+                        <% } %>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <%- include('fragmento.ejs') %>
+</body>
+</html>
