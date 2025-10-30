@@ -32,6 +32,10 @@ app.get('/tabla', async (req, res) => {
     res.send(html);
 });
 
+app.set('views', path.join(__dirname, '10vistas')); // o la carpeta raíz donde están las vistas
+app.set('view engine', 'ejs'); //seteo como motor de renderizado
+
+
 app.get('/engine', async (req, res) => {
     const personas = [
             {nombre:"horacio", apellido:"serrano", sexo:1}, 
@@ -45,8 +49,6 @@ app.get('/engine', async (req, res) => {
 });
 
 
-app.set('views', path.join(__dirname, '10vistas')); // o la carpeta raíz donde están las vistas
-app.set('view engine', 'ejs'); //seteo como motor de renderizado
 
 app.listen(port, () => {
     console.log(`Puerto ${port}`) //<-- http://localhost:3000 
