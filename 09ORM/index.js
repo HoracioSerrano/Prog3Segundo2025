@@ -3,13 +3,13 @@ import { sequelize } from "./database/index.js";
 
 //importar modelos
 
-import { User, Perfil } from "./models/index.js";
-import { Pelicula } from "./models/peliculas.js";
-import { Genero } from "./models/genero.js";
+import { User, Perfil, Genero, Pelicula, Alquiler } from "./models/index.js";
 
 //importar rutas
 
 import usersRouter from "./routers/users.js";
+import peliculasRouter from "./routers/pelicula.js";
+import alquileresRouter from "./routers/alquiler.js";
 
 const app = express();
 const PORT = 3000;
@@ -61,6 +61,8 @@ const initDDBB = async () => {
 //definimos las rutas
 
 app.use("/users", usersRouter);
+app.use("/peliculas", peliculasRouter);
+app.use("/alquileres", alquileresRouter);
 
 sequelize
   .sync({ force: true })
