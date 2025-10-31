@@ -6,6 +6,7 @@ async function Prueba(){
     const hashedPassword= await bcrypt.hash('ClaveSecreta', saltRounds);
     console.log('Hash a grabar en DB:', hashedPassword);
 
+    
     //La clave Que se ingresa en login;
     const claveIngresadaEnLogin = 'SoyHoracio';
     const resultado = await bcrypt.compare(claveIngresadaEnLogin, hashedPassword)
@@ -24,6 +25,8 @@ async function Prueba(){
     }else{
         console.log('Clave Incorrecta');
     }
+    
+    
 }
 
 Prueba();
