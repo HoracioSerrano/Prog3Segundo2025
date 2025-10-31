@@ -12,6 +12,10 @@ const port = 3000;
 app.use(express.json());
 
 
+//Habilito CORS
+const cors = require('cors');
+app.use(cors());
+
 /*
 enviar cookies
 app.get('/login', (req, res) => {
