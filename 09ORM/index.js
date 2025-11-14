@@ -11,8 +11,12 @@ import usersRouter from "./routers/users.js";
 import peliculasRouter from "./routers/pelicula.js";
 import alquileresRouter from "./routers/alquiler.js";
 
+import cors from "cors";
+
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
+
+app.use(cors());
 
 app.use(express.json());
 
